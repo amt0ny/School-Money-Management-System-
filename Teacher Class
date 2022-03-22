@@ -1,0 +1,43 @@
+package com.company;
+
+public class Teacher {
+    private int id;
+    private String name;
+    private int Salary;
+    private int SalaryEarned;
+
+    public Teacher(int id, String name, int Salary){
+        this.id = id;
+        this.name = name;
+        this.Salary = Salary;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getSalary() {
+        return Salary;
+    }
+
+    public void setSalary(int salary){
+        this.Salary = Salary;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void recivesalary(int salary){
+        SalaryEarned+= salary;
+        School.UpdateMoneySpent(salary);
+    }
+    public int TotalSalaryEarnd(){
+        return SalaryEarned;
+    }
+
+}
